@@ -4,7 +4,7 @@ recv_port=4444  #    0 - 1024  -- you can check free udp port netstat -nulp
 
 #  creating  udp socket
 #               ip type v4 ,  uDp  
-s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # socket takes 2 inputs first for address family(ipv4 or ipv6 and another one for place connection either tcp or udp)
 #  fitting    ip and port  with udp socket 
 s.bind((recv_ip,recv_port))
 
